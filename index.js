@@ -1,41 +1,34 @@
 // TODO: Include packages needed for this application
-
 // TODO: Create an array of questions for user input
 // const questions = [];
-
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {}
-
 // TODO: Create a function to initialize app
 // function init() {}
-
 // Function call to initialize app
 // init();
-
 
 const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
-const { title, cpuUsage } = require("node:process");
 
-//
-// create writeFile function using promises instead of a callback function
+// Create writeFile function using promises
 const writeREADME = util.promisify(fs.writeFile);
 
 const promptUser = () => {
     return inquirer.prompt([
-        { type: "input", name: "title", message: "What is the title of your project?", },
-        { type: "input", name: "description", message: "Write a desciption of your project.", },
-        { type: "input", name: "tableOfContents", message: "Enter Table of Contents", },
-        { type: "input", name: "installation", mesage: "Enter installation instructions.", },
-        { type: "input", name: "usage", message: "Enter usage instructions", },
-        { type: "input", name: "contribution", message: "Enter contribution guidelines.", },
-        { type: "input", name: "test", message: "Enter test instructions.", },
-        { type: "input", name: "license", message: "Enter license", },
+        { type: "input", name: "title", message: "Enter project title: ", },
+        { type: "input", name: "description", message: "Enter project description: ", },
+        { type: "input", name: "installation", message: "Enter installation instructions: ", },
+        { type: "input", name: "usage", message: "Enter usage instructions: ", },
+        { type: "input", name: "contributing", message: "Enter contribution guidelines: ", },
+        { type: "input", name: "test", message: "Enter test instructions: ", },
+        { type: "list", name: "license", message: "Choose license: ",
+            choices: [, "MIT", "Apache 2.0", "GPLv3"] },
         { type: "input", name: "github", message: "Enter GitHub username: ", },
-        { type: "input", name: "email", message: "Enger your email address: ", }
-    ])
-}
+        { type: "input", name: "email", message: "Enter email address: ", },
+    ]);
+};
 
 const generateREADME = (answers) =>
 `Title: ${answers.title}
@@ -44,23 +37,31 @@ Description: ${answers.description}
 
 Table of Contents:
     Title
-    Decription
+    Description
     Table of Contents
     Installation
     Usage
     License
-    Contributing
-    Tests
+    Contribution Guidelines
+    Test Instructions
     Questions
 
 Installation Instructions: ${answers.installation}
 
 Usage Instructions: ${answers.usage}
 
+License: ${answers.license}
 
+Contribution Guidelines: ${answers.contributing}
+
+Test Instructions: ${answers.test}
+
+Questions: 
+${answers.GitHub}
+${answers.email}
 `
 
-// Bonus using writeFileAsync as a promise
+// Use writeREADME as a promise
 const init = () => {
     promptUser()
       .then((answers) => writeREADME('README.md', generateREADME(answers)))
@@ -69,4 +70,3 @@ const init = () => {
   };
   
   init();
-
