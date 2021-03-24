@@ -57,7 +57,7 @@ Contribution Guidelines: ${answers.contributing}
 Test Instructions: ${answers.test}
 
 Questions: 
-${answers.GitHub}
+${answers.github}
 ${answers.email}
 `
 

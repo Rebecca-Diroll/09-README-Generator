@@ -4,7 +4,7 @@ Description: Description
 
 Table of Contents:
     Title
-    Decription
+    Description
     Table of Contents
     Installation
     Usage
@@ -19,8 +19,10 @@ Usage Instructions: Usage
 
 License: Apache 2.0
 
-Contribution Guidelines: Guidelines
+Contribution Guidelines: Contribution
 
-Test Instructions: undefined
+Test Instructions: Testing
 
-Questions: undefined
+Questions: 
+undefined
+rebecca.diroll@gmail.com
