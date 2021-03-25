@@ -24,41 +24,72 @@ const promptUser = () => {
         { type: "input", name: "contributing", message: "Enter contribution guidelines: ", },
         { type: "input", name: "test", message: "Enter test instructions: ", },
         { type: "list", name: "license", message: "Choose license: ",
-            choices: [, "MIT", "Apache 2.0", "GPLv3"] },
+            choices: ["MIT", "Apache 2.0", "GPLv3"] },
         { type: "input", name: "github", message: "Enter GitHub username: ", },
         { type: "input", name: "email", message: "Enter email address: ", },
     ]);
 };
 
 const generateREADME = (answers) =>
-`Title: ${answers.title}
+`# ${answers.title}
 
-Description: ${answers.description}
 
-Table of Contents:
+## Description: 
+
+> ${answers.description}
+
+
+## Table of Contents:
+
     Title
+
     Description
+    
     Table of Contents
+    
     Installation
+    
     Usage
+    
     License
+    
     Contribution Guidelines
+    
     Test Instructions
+    
     Questions
 
-Installation Instructions: ${answers.installation}
 
-Usage Instructions: ${answers.usage}
+## Installation Instructions: 
 
-License: ${answers.license}
+> ${answers.installation}
 
-Contribution Guidelines: ${answers.contributing}
 
-Test Instructions: ${answers.test}
+## Usage Instructions: 
 
-Questions: 
-${answers.github}
-${answers.email}
+    ${answers.usage}
+
+
+## License: 
+
+    ${answers.license}
+
+
+## Contribution Guidelines: 
+
+    ${answers.contributing}
+
+
+## Test Instructions: 
+
+    ${answers.test}
+
+
+## Questions? 
+
+    [GitHub:  https://github.com/${answers.github}](https://github.com/${answers.github})
+
+    [Email:  ${answers.email}](${answers.email})
 `
 
 // Use writeREADME as a promise
