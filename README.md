@@ -1,59 +1,54 @@
-# Title
-
+# Great Title!!
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Description: 
 
-> This is a great description. Better than any other description. This is the best description there has ever been. This description is amazing!!
+> Nice description
 
 
 ## Table of Contents:
-
-    Title
-
-    Description
+   
+* [Installation](#installation)
     
-    Table of Contents
+* [Usage](#usage)
     
-    Installation
+* [License](#license)
     
-    Usage
+* [Contributing](#contributing)
     
-    License
+* [Tests](#tests)
     
-    Contribution Guidelines
-    
-    Test Instructions
-    
-    Questions
+* [Questions](#questions)
 
 
-## Installation Instructions: 
+## Installation 
 
 > Install
 
 
 ## Usage Instructions: 
 
-    Usage
+> Usage
 
 
 ## License: 
 
-    MIT
+> MIT
 
 
 ## Contribution Guidelines: 
 
-    Contribution
+> Contribute
 
 
 ## Test Instructions: 
 
-    Test
+> Test
 
 
 ## Questions? 
 
-    [GitHub:  https://github.com/Rebecca-Diroll](https://github.com/Rebecca-Diroll)
+[GitHub:  https://github.com/Rebecca-Diroll](https://github.com/Rebecca-Diroll)
 
-    [Email:  rebecca.diroll@gmail.com](rebecca.diroll@gmail.com)
+[Email:  rebecca.diroll@gmail.com](rebecca.diroll@gmail.com)
+

@@ -24,15 +24,19 @@ const promptUser = () => {
         { type: "input", name: "contributing", message: "Enter contribution guidelines: ", },
         { type: "input", name: "test", message: "Enter test instructions: ", },
         { type: "list", name: "license", message: "Choose license: ",
-            choices: ["MIT", "Apache 2.0", "GPLv3"] },
+            choices: ["MIT", "Apache2.0", "GPLv3"] },
         { type: "input", name: "github", message: "Enter GitHub username: ", },
         { type: "input", name: "email", message: "Enter email address: ", },
     ]);
 };
 
+function createBadge(license) {
+    return license ? `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)` : ''
+}
+
 const generateREADME = (answers) =>
 `# ${answers.title}
-
+${createBadge(answers.license)}
 
 ## Description: 
 
@@ -40,56 +44,51 @@ const generateREADME = (answers) =>
 
 
 ## Table of Contents:
-
-    Title
-
-    Description
+   
+* [Installation](#installation)
     
-    Table of Contents
+* [Usage](#usage)
     
-    Installation
+* [License](#license)
     
-    Usage
+* [Contributing](#contributing)
     
-    License
+* [Tests](#tests)
     
-    Contribution Guidelines
-    
-    Test Instructions
-    
-    Questions
+* [Questions](#questions)
 
 
-## Installation Instructions: 
+## Installation 
 
 > ${answers.installation}
 
 
 ## Usage Instructions: 
 
-    ${answers.usage}
+> ${answers.usage}
 
 
 ## License: 
 
-    ${answers.license}
+> ${answers.license}
 
 
 ## Contribution Guidelines: 
 
-    ${answers.contributing}
+> ${answers.contributing}
 
 
 ## Test Instructions: 
 
-    ${answers.test}
+> ${answers.test}
 
 
 ## Questions? 
 
-    [GitHub:  https://github.com/${answers.github}](https://github.com/${answers.github})
+[GitHub:  https://github.com/${answers.github}](https://github.com/${answers.github})
 
-    [Email:  ${answers.email}](${answers.email})
+[Email:  ${answers.email}](${answers.email})
+
 `
 
 // Use writeREADME as a promise
