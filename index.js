@@ -88,7 +88,6 @@ ${createBadge(answers.license)}
 [GitHub:  https://github.com/${answers.github}](https://github.com/${answers.github})
 
 [Email:  ${answers.email}](${answers.email})
-
 `
 
 // Use writeREADME as a promise
