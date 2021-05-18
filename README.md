@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## User Story
-You have created a new app and you need a README.md file. This app will generate one for you. Just answer a few straight forward questions then sit back and relax as each section of a README.md file is generated for you.
+You have created a new app and you need a README.md file. This app will generate one for you. Just answer a few straight forward questions then sit back and relax as each section of a README.md file is populated for you.
 
 ## Table of Contents
 - [Installation](#installation)
