@@ -19,7 +19,7 @@ You have created a new app and you need a README.md file. This app will generate
 * If you need to download the node_modules, run `npm i` in the terminal inside the cloned directory.
 
 ## Usage
-Run `node index.js` and answer the questions. The answers to the questions will be used to create a README.md file and populate each section.
+Run `node index.js` and answer the questions. The answers will be used to create a README.md file and populate each section.
 
 ## Technology
 * JavaScript
